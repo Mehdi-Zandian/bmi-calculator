@@ -3,4 +3,28 @@
 @tailwind utilities;
 
 @layer components {
+  /* bmi form */
+  .formItem {
+    @apply bg-slate-800 rounded flex flex-col items-center w-fit px-10 py-5;
+  }
+  .formItem__title {
+    @apply font-bold text-gray-400;
+  }
+  .formItem__number {
+    @apply text-4xl text-white font-bold;
+  }
+  .formItem__addRemove {
+    @apply bg-slate-700 w-10 h-10 rounded-full font-bold text-xl mt-2 cursor-pointer;
+  }
+  .activeGender span,
+  .activeGender label {
+    @apply !text-white;
+  }
+
+  .page {
+    @apply hidden;
+  }
+  .page.activePage {
+    @apply !block;
+  }
 }

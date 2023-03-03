@@ -1,11 +1,11 @@
 import "./main.css";
+import BMIForm from "./app/BMIForm/BMIForm";
 
 class App {
   // eslint-disable-next-line class-methods-use-this
   render() {
-    // Navabar
-    // BMIForm
-    // Result
+    const bmiForm = new BMIForm();
+    bmiForm.init();
   }
 }
 

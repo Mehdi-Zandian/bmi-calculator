@@ -17,11 +17,7 @@
         href="https://github.com/Mehdi-Zandian/bmi-calculator"
         target="_blank"
       >
-        <img
-          src="./assets/github.svg"
-          class="md:w-10 lg:w-12 w-8"
-          alt="github icon"
-        />
+        <img src="./assets/github.svg" class="md:w-10 w-8" alt="github icon" />
       </a>
       <h1
         class="md:text-xl lg:text-2xl uppercase font-bold grow text-center cursor-default"
@@ -29,6 +25,60 @@
         BMI Calculator
       </h1>
     </header>
+
+    <div class="page bmiForm activePage">
+      <form class="flex flex-col items-center py-10 gap-5">
+        <div class="genders flex gap-1">
+          <div class="formItem cursor-pointer">
+            <span class="material-icons text-5xl text-gray-400">male</span>
+            <label class="formItem__title">MALE</label>
+          </div>
+          <div class="formItem cursor-pointer activeGender">
+            <span class="material-icons text-5xl text-gray-400">female</span>
+            <label class="formItem__title">FEMALE</label>
+          </div>
+        </div>
+
+        <div class="formItem">
+          <label class="formItem__title">HEIGHT</label>
+          <h1 class="text-gray-400 mb-5">
+            <span class="formItem__number heightNumber">183</span>cm
+          </h1>
+          <input class="height" type="range" min="1" max="250" />
+        </div>
+
+        <div class="flex gap-1">
+          <div class="formItem !px-4">
+            <label class="formItem__title">WEIGHT</label>
+            <span class="formItem__number weight">74</span>
+            <div class="weightBtns flex gap-5">
+              <input class="formItem__addRemove" type="button" value="+" />
+              <input class="formItem__addRemove" type="button" value="-" />
+            </div>
+          </div>
+          <div class="formItem !px-4">
+            <label class="formItem__title">AGE</label>
+            <span class="formItem__number age">19</span>
+            <div class="ageBtns flex gap-5">
+              <input class="formItem__addRemove" type="button" value="+" />
+              <input class="formItem__addRemove" type="button" value="-" />
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="fixed bottom-0 left-0 w-full bg-rose-700 py-5 font-semibold text-center"
+        >
+          CALCULATE YOUR BMI
+        </button>
+      </form>
+    </div>
+
+    <div class="page bmiResult">
+      <div class="formItem">
+        <h1>Hello There</h1>
+      </div>
+    </div>
   </body>
 </html>
-<!-- <span class="material-icons">female</span> -->
