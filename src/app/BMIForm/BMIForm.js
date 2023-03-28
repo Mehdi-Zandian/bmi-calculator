@@ -1,3 +1,4 @@
+import URLParams from "../URLParams";
 import BMIFormValues from "./BMIFormValues";
 import BMIResult from "../BMIResult/BMIResult";
 
@@ -55,18 +56,13 @@ export default class BMIForm extends BMIFormValues {
     this.ageBtns.children[1].addEventListener("click", reduceAge);
   }
 
-  activeResultPage() {
-    this.bmiForm.classList.remove("activePage");
-    this.bmiResult.classList.add("activePage");
-  }
-
   submitFormHandler() {
-    const bmiResult = new BMIResult(); // avoid making multiple instances (GARBAGE COLLECTION)
+    const urlParams = new URLParams();
+    const bmiResult = new BMIResult();
     const submitButtonActions = (e) => {
       e.preventDefault();
-      this.activeResultPage(); // hide formPage and show resultPage
-      // bmiResult Page
-      bmiResult.init(this.getBMIFormValue());
+      urlParams.resultPageParamsHandler(true);
+      bmiResult.init(this.getBMIFormValue()); // pass values to result page
     };
     this.submitBtn.addEventListener("click", submitButtonActions);
   }

@@ -5,5 +5,6 @@ export default class BMIResult {
 
   init(formValues) {
     this.values = formValues;
+    console.log(this.values);
   }
 }
