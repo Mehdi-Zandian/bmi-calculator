@@ -16,8 +16,8 @@
         title="Github Code"
         href="https://github.com/Mehdi-Zandian/bmi-calculator"
         target="_blank"
+        class="github"
       >
-        <img src="./assets/github.svg" class="md:w-10 w-8" alt="github icon" />
       </a>
       <h1
         class="md:text-xl lg:text-2xl uppercase font-bold grow text-center cursor-default"
@@ -75,10 +75,21 @@
       </form>
     </div>
 
-    <div class="page bmiResult">
-      <div class="formItem">
-        <h1>Hello There</h1>
+    <div class="page bmiResult w-80 py-5 mx-auto">
+      <h1 class="text-3xl font-bold pb-5">Your Result</h1>
+      <div class="bg-slate-800 rounded flex flex-col items-center w-full p-5">
+        <small class="status font-bold text-sm">Normal</small>
+        <h1 class="score text-7xl font-bold py-5">22.1</h1>
+        <p class="result text-center font-semibold w-11/12">
+          You have a normal body weight. good job!
+        </p>
       </div>
+      <button
+        type="button"
+        class="fixed bottom-0 left-0 w-full bg-rose-700 py-5 font-semibold text-center"
+      >
+        Re-Calculate Your BMI
+      </button>
     </div>
   </body>
 </html>
